@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-around;
     cursor: pointer;
+    font-size: 0.9rem;
 }
 
 .my__navbar div{
@@ -27,13 +28,23 @@
     font-weight: 500;
 }
 
+.items__nav{
+    margin-top: 15px;
+}
+
 .boots__navbar{
    font-weight: 600;
    margin-top: 35px;
+   background-color: white;
 }
 
 .boots__navbar a:hover{
     color: red;
+}
+
+.boots__navbar img{
+    width: 140px;
+    margin-left: 5%;
 }
 
 .init__container{
@@ -86,10 +97,19 @@ grid-column-start: span 2;
 .second__container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-auto-rows: 150px;
+    grid-auto-rows: 218px;
     grid-gap: 10px;
     text-align: start;
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card-body{
+    min-height: 1px;
+}
+
+.card-text{
+    overflow: hidden;
 }
 
 .gallery__item2:nth-child(1){
@@ -103,7 +123,7 @@ grid-column-start: span 2;
 }
 
 .third__container{
-    margin-top: 80px;
+    margin-top: 60px;
     margin-bottom: 80px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -119,7 +139,6 @@ grid-column-start: span 2;
 
 .third__img{
     width: 100%;
-    margin-top: 10px;
 }
 
 .third__img2{
@@ -128,14 +147,67 @@ grid-column-start: span 2;
 }
 
 footer{
-    background-color: black;
+    background-color: #1A1A1A;
     color: white;
-    display: flex;
-    height: 250px;
-    justify-content: space-around;
-    padding: 70px;
 }
 
+.my__footer{
+    display: grid;
+    grid-template-columns: 25% 50% 25% 0;
+    height: 160px;
+    padding: 50px;
+    text-decoration: none;
+    justify-items: center;
+}
+
+.my__footer:nth-child(2){
+    grid-column: 3;
+}
+
+.footer__secciones a{
+    color: white;
+    text-decoration-line:none ;
+}
+
+.footer__secciones li{
+    font-size: 17px;
+    list-style-type: none;
+}
+
+.footer__secciones a:hover{
+    color: red;
+}
+
+.footer__nosotros a{
+    color: white;
+    text-decoration-line:none ;
+}
+
+.footer__nosotros li{
+    font-size: 17px;
+    list-style-type: none;
+}
+
+.footer__nosotros a:hover{
+    color: red
+}
+
+.footer__redes a{
+    color: white;
+}
+
+.footer__redes i{
+    font-size: 2rem;
+}
+
+.footer__redes i:hover{
+    transform: scale(1.1);
+}
+
+.footer__noti{
+    width: 100%;
+    cursor: pointer;
+}
 
 /* MEDIA QUERYS */
 
@@ -167,9 +239,18 @@ footer{
         grid-row-start: span 2;
         }
 
+    .second__container{
+        display: block;
+        
+    }
+    .fecha{
+        display: none;
+    }
+    .my__navbar div i{
+        display: none;
+    }
 }
-
-@media (min-width: 420px){
+@media (min-width: 440px){
     .init__container{
         grid-template-columns: repeat(2, 1fr);
     }
